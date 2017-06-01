@@ -1,0 +1,282 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008-2014 Nathaniel Johnston <nathaniel@njohnston.ca> http://www.njohnston.ca
+%
+% Depending on your TeX distribution, you may need to download the revnum and longtable packages for this template to work!
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+
+\documentclass[usenames,dvipsnames,letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage{array}
+\usepackage[svgnames]{xcolor}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{longtable}
+\usepackage{revnum}
+\usepackage[pdftex,colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{tocloft}
+\usepackage[textwidth=18cm,textheight=25cm]{geometry} % Edit as required
+\usepackage[utf8]{inputenc}
+\usepackage{marvosym}
+\usepackage[document]{ragged2e}
+\include{cv-custom} 
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+\setlength\LTleft{0.2in} % needed to make longtable full-width
+\setlength\LTright{0.2in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\fboxsep}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+
+% the next four commands allow for the \ressubheading environment to be 1, 2, 3, or 4 subrows, depending on which command you use. This is admittedly hack-ish, and should probably be replaced by a single more flexible command (with optional arguments) in the future
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand{\ressubheadingb}[6]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+		\textit{#5} & \textit{#6} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand{\ressubheadingc}[8]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+		\textit{#5} & \textit{#6} \\
+		\textit{#7} & \textit{#8} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand\foo[9]{%
+    \def\tempb{#2}%
+    \def\tempc{#3}%
+    \def\tempd{#4}%
+    \def\tempe{#5}%
+    \def\tempf{#6}%
+    \def\tempg{#7}%
+    \def\temph{#8}%
+    \def\tempi{#9}%
+    \foocontinued
+}
+\newcommand\foocontinued[7]{%
+    % Do whatever you want with your 9+7 arguments here.
+}
+
+\newcommand{\ressubheadingd}[1]{
+	\def\argten{#1}%
+	\ressubheadingdb
+}
+\newcommand{\ressubheadingdb}[9]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{\argten} & #1 \\
+		\textit{#2} & \textit{#3} \\
+		\textit{#4} & \textit{#5} \\
+		\textit{#6} & \textit{#7} \\
+		\textit{#8} & \textit{#9} \\
+\end{tabular*}\vspace{-6pt}}
+
+
+%-----------------------------------------------------------
+
+
+\begin{document}
+{\large \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r} 
+\textbf{\LARGE Alexandre Pinto}\smallskip & \smallskip \\
+Coimbra, Portugal & 
+
+
+\email{alexandpinto@gmail.com}\\ 
+& \web{https://alexpnt.github.io}{Personal Website}\\
+& \web{https://github.com/alexpnt}{Github}\\
+& \web{https://www.linkedin.com/in/alexandre-pinto}{Linkedin}\\
+\end{tabular*}}
+\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Work Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\begin{ftabular}{p{4cm}|p{12cm}}
+\textsc{\small{Nov 2016 - Present}} & \textbf{Backend Developer -} \textbf{\href{http://www.ubiwhere.com/en/}{Ubiwhere}} \\
+ & \\
+ & \\
+  
+\end{ftabular}
+\vspace{0.25cm}
+
+\begin{ftabular}{p{4cm}|p{12cm}}
+\textsc{\small{Oct 2015 - Jul 2016}} & \textbf{Research Intern -} \textbf{\href{https://www.inesctec.pt/ip-en?set_language=en\&cl=en}{INESCTEC}} / \textbf{\href{https://www.cisuc.uc.pt/}{CISUC}} \\
+ & Development of a filter that classifies public social data according to their potential relevance to a general audience, filtering out irrelevant information and relying primarily on linguistic features and confirm if relevance can be predicted from a set of journalistic criteria.\\
+ & Technologies used: scikit-learn, NLTK, numPy, matplotlib, git.\\
+  
+\end{ftabular}
+\vspace{0.25cm}
+
+\begin{ftabular}{p{4cm}|p{12cm}}
+\textsc{\small{Oct 2013 - Mar 2014}} & \textbf{Software Developer -} \textbf{\href{http://ipn.pt/laboratorio/LIS}{Pedro Nunes Institute (IPN)}} \\
+ & Helped maintaining and developing new features for the information systems.\\
+ & Technologies used: Java Struts, Ruby on Rails, Git.\\
+
+\end{ftabular}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Relevant Academic Projects}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{ftabular}{p{4cm}|p{12cm}}
+\textsc{\small{Feb 2014 - May 2014}\hspace{1cm}} & \textbf{Expert Contact} \\
+ & This project was carried out in the context of the Software Project Management course. The objective of the project was to build a new way of communication between the nurses and patients with breast cancer during chemotherapy sessions. This project was a partnership between the research team working at Institute of Health and Care Sciences of the University of Gotemburg and the University of Coimbra and was conducted by a multidisciplinary team.\\
+ & Technologies used: Struts2, Hibernate Generic D.A.O. Framework, Bootstrap, Git.\\
+ & Role in the team: Developer.
+ 
+\end{ftabular}
+
+\vspace{0.25cm}
+
+\begin{ftabular}{p{4cm}|p{12cm}}
+\textsc{\small{Mar 2016 - May 2016}\hspace{1cm}} & \textbf{Default Credit Card Prediction} \\
+ & This project was carried out in the context of the Pattern Recognition course. The goal of this project was to develop classifiers to predict if a given client would be able to pay (or not) its credit card in the next month. The project followed the various steps of a typical machine learning pipeline (data preprocessing, feature selection/reduction, classification and evaluation). \\
+ & Technologies used: scikit-learn, numPy, matplotlib, pandas, seaborn, PyQT5.\\
+ & 
+ 
+\end{ftabular}
+
+\vspace{0.25cm}
+
+\begin{ftabular}{p{4cm}|p{12cm}}
+\textsc{\small{Feb 2014 - May 2014}\hspace{1cm}} & \textbf{Predicting the memorability of images} \\
+ & This project was carried out in the context of the Artificial Intelligence course. The goal of this project was the automatic classification of images into a degree of memorability by computing their levels of attention according to a set of dimensions.\\
+ & Technologies used: scikit-learn.\\
+ & 
+ 
+\end{ftabular}
+
+\vspace{0.25cm}
+
+\begin{ftabular}{p{4cm}|p{12cm}}
+\textsc{\small{Feb 2014 - May 2014}\hspace{1cm}} & \textbf{Semantic Search and
+Recommendation in eCommerce} \\
+ & This project was carried out in the context of the Semantic Web course. The objective of the project was to build an ecommerce website where users could search for electronic products, browse product categories and get recommendations.\\
+ & Technologies used: Protégé (Ontology editor), Apache Jena, Apache Tomcat.\\
+ &
+ 
+\end{ftabular}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education and training}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{University of Coimbra}{}{Master Degree in Informatics Engineering - Intelligent Systems}{2013 -- 2016}
+	\begin{itemize}
+		\resitem{Graduated with 15/20 average}
+		\resitem{Dissertation titled “Classification of Social Media Posts according to their Relevance”}
+	\end{itemize}
+	\ressubheading{}{}{Relevant Courses:}{}
+	\begin{itemize}
+		\resitem{Pattern Recognition, Artificial Intelligence}
+		\resitem{Evolutionary Computation, Adaptive Computation}
+		\resitem{Semantic Web, Internet Applications}
+		\resitem{Project Management, Systems Integration}
+		\resitem{Information Theory, Statistics, Technical Communication}
+	\end{itemize}
+	
+\item
+	\ressubheading{University of Coimbra}{}{Bachelor Degree in Informatics Engineering}{2010 -- 2013}
+	\begin{itemize}
+		\resitem{Admission Grade: 17.55/20 }
+		\resitem{Graduated with 16/20 average}
+	\end{itemize}
+\item
+	\ressubheading{High School - Quinta das Flores}{}{Science and Technology Course }{2007 -- 2010}
+	\begin{itemize}
+		\resitem{Graduated with 16/20 average}
+	\end{itemize}
+
+\end{itemize}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Technical Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize*}
+\item{\textbf{Programming Languages:} Proficient in Java, Python and C. Additional knowledge in ActionScript 3.0 and Matlab.}
+\item{\textbf{Semantic Web:} Ontologies Representation (RDF,OWL), Triple Stores, SPARQL, Apache Jena, NLTK.}
+\item{\textbf{Artificial Intelligence:} Evolutionary Computation, Supervised/Unsupervised Learning Algorithms, Machine Learning, NLP.}
+\item{\textbf{Data Structures and Algorithms:} Knowledge of different Algorithmic Paradigms.}
+\item{\textbf{Control Version Systems:} Git.}
+\item{\textbf{Web Frameworks:} Struts2, Django, Django Rest Framework, AngularJS 1, Bottle. Familiar with Rails.}
+\item{\textbf{Hybrid Mobile App Frameworks:} Ionic.}
+\item{\textbf{Machine Learning Frameworks:} scikit-learn, Weka.}
+\item{\textbf{Databases:} Familiar with MySQL, Oracle, PostgreSQL.}
+\item{\textbf{Development Tools:} Eclipse, Netbeans, IntelliJ, PyCharm, Sublime Text Editor.}
+\item{\textbf{Deployment and Infrastructure:} Docker.}
+\item{\textbf{Web:} Proficient with HTML. Familiar with CSS and Bootstrap.}
+\item{\textbf{Operating Systems:} Competent in GNU/Linux and Windows.}
+\item{\textbf{Productivity/Project Management Tools:} LaTeX, Trello, Slack.}
+\item{\textbf{Languages:} Portuguese (fluent,native), English (Very Good).}
+\item{\textbf{Professional:} Self-motivated, Self-learner, Team Player, Planning and Organizational Skills.}
+\item{\textbf{Activities \& Interests:} Reading, Exercising, Programming by passion and hobby.}
+
+\end{itemize*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Awards, Grants \& Honours}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\vspace{-10pt}
+	\begin{center}\begin{longtable}{l@{\extracolsep{\fill}}r}
+		\multicolumn{2}{c}{Award to the 3\% Best Students \cftdotfill{\cftdotsep}2010 -- 2011}\\
+		\multicolumn{2}{c}{Award to the 3\% Best Students \cftdotfill{\cftdotsep}2011 -- 2012}\\
+		\vphantom{E}
+\end{longtable}
+\end{center}\vspace*{-50pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Publications}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{Predicting the Relevance of Social Media Posts Based on Linguistic Features}{}{New Generation Computing, 2017}{}
+
+	
+\item
+	\ressubheading{Comparing the Performance of Different NLP Toolkits in Formal and Social Media Text}{}{Schloss Dagstuhl – Leibniz Center for Informatics, 2016}{}
+
+\end{itemize}
+\end{document}
