@@ -7,6 +7,11 @@
 %This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
 
 
+%
+% Edited by Alexandre Pinto
+% 2017
+%
+
 \documentclass[usenames,dvipsnames,letterpaper,11pt]{article}
 \newlength{\outerbordwidth}
 \pagestyle{empty}
@@ -61,6 +66,8 @@
     \end{shaded}
   }\vspace{-5pt}
 }
+
+\newcommand{\colorhref}[3][blue]{\href{#2}{\color{#1}{#3}}}%
 
 % the next four commands allow for the \ressubheading environment to be 1, 2, 3, or 4 subrows, depending on which command you use. This is admittedly hack-ish, and should probably be replaced by a single more flexible command (with optional arguments) in the future
 \newcommand{\ressubheading}[4]{
@@ -257,6 +264,19 @@ Recommendation in eCommerce} \\
 \end{itemize*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Publications}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{{\colorhref[black]{https://link.springer.com/article/10.1007\%2Fs00354-017-0015-1}{Predicting the Relevance of Social Media Posts Based on Linguistic Features}}}{}{New Generation Computing, 2017}{}
+
+	
+\item
+	\ressubheading{\colorhref[black]{http://drops.dagstuhl.de/opus/volltexte/2016/6008/pdf/OASIcs-SLATE-2016-3.pdf}{Comparing the Performance of Different NLP Toolkits in Formal and Social Media Text}}{}{Schloss Dagstuhl – Leibniz Center for Informatics, 2016}{}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Awards, Grants \& Honours}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\vspace{-10pt}
@@ -267,16 +287,5 @@ Recommendation in eCommerce} \\
 \end{longtable}
 \end{center}\vspace*{-50pt}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Publications}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
-\item
-	\ressubheading{Predicting the Relevance of Social Media Posts Based on Linguistic Features}{}{New Generation Computing, 2017}{}
 
-	
-\item
-	\ressubheading{Comparing the Performance of Different NLP Toolkits in Formal and Social Media Text}{}{Schloss Dagstuhl – Leibniz Center for Informatics, 2016}{}
-
-\end{itemize}
 \end{document}
