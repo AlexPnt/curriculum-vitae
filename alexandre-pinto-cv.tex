@@ -23,12 +23,14 @@
 \usepackage{framed}
 \usepackage{longtable}
 \usepackage{revnum}
-\usepackage[pdftex,colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
 \usepackage{tocloft}
 \usepackage[textwidth=18cm,textheight=25cm]{geometry} % Edit as required
 \usepackage[utf8]{inputenc}
 \usepackage{marvosym}
 \usepackage[document]{ragged2e}
+\usepackage{fontspec}
+\usepackage{fontawesome}
 \include{cv-custom} 
 %-----------------------------------------------------------
 %Edit these values as you see fit
@@ -126,10 +128,10 @@
 Coimbra, Portugal & 
 
 
-\email{alexandpinto@gmail.com}\\ 
-& \web{https://alexpnt.github.io}{Personal Website}\\
-& \web{https://github.com/alexpnt}{Github}\\
-& \web{https://www.linkedin.com/in/alexandre-pinto}{Linkedin}\\
+\href{alexandpinto@gmail.com}{\small \faEnvelope{} - alexandpinto@gmail.com}\\ 
+& \href{https://alexpnt.github.io}{\small \faGlobe{} - alexpnt.github.io}\\
+& \href{https://github.com/alexpnt}{\small \faGithub{} - github.com/alexpnt}\\
+&  \href{https://www.linkedin.com/in/alexandre-pinto}{\small \faLinkedin{} - linkedin.com/in/alexandre-pinto}\\
 \end{tabular*}}
 \\
 
@@ -139,7 +141,7 @@ Coimbra, Portugal &
 %
 \begin{ftabular}{p{4cm}|p{12cm}}
 \textsc{\small{Nov 2017 - Present}} & \textbf{Machine Learning Engineer -} \textbf{\href{https://www.wit-software.com/}{WIT software}} \\
-& At WIT I am responsible for running machine learning experiments, in order to build proof-of-concept prototypes and deploy them to production, with performance and scalability in mind. I work mostly in the Natural Language Processing (NLP) sub-field of Artificial Intelligence, using state-of-art methods. My daily work is composed of research and practical implementation of machine learning solutions. 
+& At WIT, I am responsible for turning machine learning experiments and proof-of-concept prototypes into production-ready solutions, always having performance and scalability in mind. I work mostly in the Natural Language Processing (NLP) sub-field of Artificial Intelligence, using state-of-art methods. My daily work encompasses all stages of research, design, implementation and testing of machine learning services. 
 
   
 \end{ftabular}
@@ -147,24 +149,25 @@ Coimbra, Portugal &
 
 \begin{ftabular}{p{4cm}|p{12cm}}
 \textsc{\small{Nov 2016 - Oct 2017}} & \textbf{Backend Developer -} \textbf{\href{http://www.ubiwhere.com/en/}{Ubiwhere}} \\
- & I was part of the core team responsible for developing a smart water consumption platform for the city of Porto, Portugal. This meant building a system with high-availability, multi-tenancy and concurrency support. My job involved implementing REST APIs and developing the core of the backend web services. Furthermore, I was also involved in the development of the frontend mobile app, used by hundreds of users and available in multiple mobile operative systems such as Android and iOS.  \\
- & Technologies used: Django, Django REST Framework, Python Ecosystem, Ionic, Docker, GNU/Linux, git. \\
+ & At Ubiwhere, I was part of the core team responsible for developing a smart water consumption platform for the city of Porto, Portugal. This meant building a system with high-availability, multi-tenancy and concurrency support. My job involved implementing REST APIs and developing the core of the backend web services. Furthermore, I was also involved in the development of the frontend mobile app, used by hundreds of users and available in multiple mobile operating systems such as Android and iOS.  \\
+ & Technologies used: Django/Python, Django REST Framework, Ionic, Docker, GNU/Linux, Git. \\
   
 \end{ftabular}
 \vspace{0.25cm}
 
 \begin{ftabular}{p{4cm}|p{12cm}}
 \textsc{\small{Oct 2015 - Jul 2016}} & \textbf{Machine Learning Research Intern -} \textbf{\href{https://www.inesctec.pt/ip-en?set_language=en\&cl=en}{INESCTEC}} / \textbf{\href{https://www.cisuc.uc.pt/}{CISUC}} \\
- & My job was to develop a filter system that classifies public social data according to their potential relevance to a general audience, filtering out irrelevant information and relying primarily on linguistic features, thereby confirming if relevance can be predicted from a set of journalistic criteria.\\
- & Technologies used: scikit-learn, NLTK, numPy, matplotlib, pandas, seaborn, PyQt5.\\
+ & At INESC TEC/CISUC, I was involved in a research team that developed a filter system that classifies public social data according to their potential relevance to a general audience, filtering out irrelevant information and relying primarily on linguistic and journalistic features.\\
+ & Technologies used: Python, scikit-learn, Numpy, Matplotlib, pandas, Seaborn, PyQt5.\\
   
 \end{ftabular}
 \vspace{0.25cm}
 
 \begin{ftabular}{p{4cm}|p{12cm}}
 \textsc{\small{Oct 2013 - Mar 2014}} & \textbf{Software Developer -} \textbf{\href{http://ipn.pt/laboratorio/LIS}{Pedro Nunes Institute (IPN)}} \\
- & I maintained and developed new features for the information systems.\\
- & Technologies used: Java Struts, Ruby on Rails, Git.\\
+ & At IPN (Laboratory for Informatics and Systems), I maintained and developed new features for the information systems.
+\\
+ & Technologies used: Apache Struts/Java, Ruby on Rails/Ruby, Git.\\
 
 \end{ftabular}
 
