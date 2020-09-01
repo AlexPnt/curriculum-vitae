@@ -9,7 +9,7 @@
 
 %
 % Edited by Alexandre Pinto
-% 2017
+% 2020
 %
 
 \documentclass[usenames,dvipsnames,letterpaper,11pt]{article}
@@ -31,6 +31,7 @@
 \usepackage[document]{ragged2e}
 \usepackage{fontspec}
 \usepackage{fontawesome}
+\usepackage{multicol}
 \include{cv-custom} 
 %-----------------------------------------------------------
 %Edit these values as you see fit
@@ -123,17 +124,19 @@
 
 
 \begin{document}
-{\large \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r} 
+{\large \begin{tabular*}{7in}{l@{\extracolsep{\fill}}l} 
+
 \textbf{\LARGE Alexandre Pinto}\smallskip & \smallskip \\
 Coimbra, Portugal & 
 
 
-\href{alexandpinto@gmail.com}{\small \faEnvelope{} - alexandpinto@gmail.com}\\ 
-& \href{https://alexpnt.github.io}{\small \faGlobe{} - alexpnt.github.io}\\
-& \href{https://github.com/alexpnt}{\small \faGithub{} - github.com/alexpnt}\\
-&  \href{https://www.linkedin.com/in/alexandre-pinto}{\small \faLinkedin{} - linkedin.com/in/alexandre-pinto}\\
+\href{alexandpinto@gmail.com}{\small \faEnvelope{} | alexandpinto@gmail.com}\\ 
+& \href{https://alexpnt.github.io}{\small \faGlobe{} | alexpnt.github.io}\\
+& \href{https://github.com/alexpnt}{\small \faGithub{} | alexpnt}\\
+&  \href{https://www.linkedin.com/in/alexandre-pinto}{\small \faLinkedin{} | alexandre-pinto}\\
 \end{tabular*}}
 \\
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Work Experience}
@@ -141,7 +144,9 @@ Coimbra, Portugal &
 %
 \begin{ftabular}{p{4cm}|p{12cm}}
 \textsc{\small{Nov 2017 - Present}} & \textbf{Machine Learning Engineer -} \textbf{\href{https://www.wit-software.com/}{WIT software}} \\
-& At WIT, I am responsible for turning machine learning experiments and proof-of-concept prototypes into production-ready solutions, always having performance and scalability in mind. I work mostly in the Natural Language Processing (NLP) sub-field of Artificial Intelligence, using state-of-art methods. My daily work encompasses all stages of research, design, implementation and testing of machine learning services. 
+& At WIT, I am responsible for turning machine learning experiments and proof-of-concept prototypes into production-ready solutions, always having performance and scalability in mind. I work mostly in the Natural Language Processing (NLP) sub-field of Artificial Intelligence, using state-of-art methods. My daily work encompasses all stages of research, design, implementation and testing of machine learning services (\href{https://www.wcp.ai}{https://www.wcp.ai}).\\\\
+ & \textit{Technologies: Python, NumPy, Pandas, Scikit-learn, XGBoost, \hfill \break Tensorflow, Pytorch,  Docker, Git.} \\
+
 
   
 \end{ftabular}
@@ -149,16 +154,16 @@ Coimbra, Portugal &
 
 \begin{ftabular}{p{4cm}|p{12cm}}
 \textsc{\small{Nov 2016 - Oct 2017}} & \textbf{Backend Developer -} \textbf{\href{http://www.ubiwhere.com/en/}{Ubiwhere}} \\
- & At Ubiwhere, I was part of the core team responsible for developing a smart water consumption platform for the city of Porto, Portugal. This meant building a system with high-availability, multi-tenancy and concurrency support. My job involved implementing REST APIs and developing the core of the backend web services. Furthermore, I was also involved in the development of the frontend mobile app, used by hundreds of users and available in multiple mobile operating systems such as Android and iOS.  \\
- & Technologies used: Django/Python, Django REST Framework, Ionic, Docker, GNU/Linux, Git. \\
+ & At Ubiwhere, I was part of the core team responsible for developing a smart water consumption platform for the city of Porto, Portugal. This meant building a system with high-availability, multi-tenancy and concurrency support. My job consisted in implementing REST APIs and developing the core of the backend web services. Furthermore, I was also involved in the development of the frontend mobile app, used by hundreds of users and available in multiple mobile operating systems such as Android and iOS (\href{https://www.ubiwhere.com/en/case-studies/smart-cities/app-aguas-do-porto}{app-aguas-do-porto}).  \\\\
+ & \textit{Technologies: Django/Python, Django REST Framework, Ionic, Docker, Git.} \\
   
 \end{ftabular}
 \vspace{0.25cm}
 
 \begin{ftabular}{p{4cm}|p{12cm}}
 \textsc{\small{Oct 2015 - Jul 2016}} & \textbf{Machine Learning Research Intern -} \textbf{\href{https://www.inesctec.pt/ip-en?set_language=en\&cl=en}{INESCTEC}} / \textbf{\href{https://www.cisuc.uc.pt/}{CISUC}} \\
- & At INESC TEC/CISUC, I was involved in a research team that developed a filter system that classifies public social data according to their potential relevance to a general audience, filtering out irrelevant information and relying primarily on linguistic and journalistic features.\\
- & Technologies used: Python, scikit-learn, Numpy, Matplotlib, pandas, Seaborn, PyQt5.\\
+ & At INESC TEC/CISUC, I was involved in a research team that developed a filter system that classifies public social data according to their potential relevance to a general audience, filtering out irrelevant information and relying primarily on linguistic and journalistic features (\href{https://reminds.dcc.fc.up.pt/}{reminds.dcc.fc.up.pt}).\\\\
+ & \textit{Technologies: Python, NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn, PyQt5.}\\
   
 \end{ftabular}
 \vspace{0.25cm}
@@ -166,8 +171,8 @@ Coimbra, Portugal &
 \begin{ftabular}{p{4cm}|p{12cm}}
 \textsc{\small{Oct 2013 - Mar 2014}} & \textbf{Software Developer -} \textbf{\href{http://ipn.pt/laboratorio/LIS}{Pedro Nunes Institute (IPN)}} \\
  & At IPN (Laboratory for Informatics and Systems), I maintained and developed new features for the information systems.
-\\
- & Technologies used: Apache Struts/Java, Ruby on Rails/Ruby, Git.\\
+\\\\
+ & \textit{Technologies: Apache Struts/Java, Ruby on Rails/Ruby, Git.}\\
 
 \end{ftabular}
 
@@ -183,8 +188,8 @@ Coimbra, Portugal &
 
 \begin{ftabular}{p{4cm}|p{12cm}}
 \textsc{\small{Mar 2016 - May 2016}\hspace{1cm}} & \textbf{Default Credit Card Prediction} \\
- & This project was carried out in the context of the Pattern Recognition course. The goal of this project was to develop classifiers to predict if a given client would be able to pay (or not) its credit card in the next month. The project followed the various steps of a typical machine learning pipeline (data preprocessing, feature selection/reduction, classification and evaluation). \\
- & Technologies used: scikit-learn, numPy, matplotlib, pandas, seaborn, PyQt5.\\
+ & This project was carried out in the context of the Pattern Recognition course. The goal of this project was to develop classifiers to predict if a given client would be able to pay (or not) its credit card in the next month. The project followed the various steps of a typical machine learning pipeline (data preprocessing, feature selection/reduction, classification and evaluation). \\\\
+ &  \textit{Technologies: NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn, PyQt5.}\\
  & 
  
 \end{ftabular}
@@ -193,8 +198,8 @@ Coimbra, Portugal &
 
 \begin{ftabular}{p{4cm}|p{12cm}}
 \textsc{\small{Feb 2014 - May 2014}\hspace{1cm}} & \textbf{Predicting the memorability of images} \\
- & This project was carried out in the context of the Artificial Intelligence course. The goal of this project was the automatic classification of images into a degree of memorability by computing their levels of attention according to a set of dimensions.\\
- & Technologies used: scikit-learn.\\
+ & This project was carried out in the context of the Artificial Intelligence course. The goal of this project was the automatic classification of images into a degree of memorability by computing their levels of attention according to a set of dimensions.\\\\
+ & \textit{Technologies: NumPy, Pandas, Scikit-learn.}\\
  & 
  
 \end{ftabular}
@@ -204,8 +209,8 @@ Coimbra, Portugal &
 \begin{ftabular}{p{4cm}|p{12cm}}
 \textsc{\small{Feb 2014 - May 2014}\hspace{1cm}} & \textbf{Semantic Search and
 Recommendation in eCommerce} \\
- & This project was carried out in the context of the Semantic Web course. The objective of the project was to build an ecommerce website where users could search for electronic products, browse product categories and get recommendations.\\
- & Technologies used: Protégé (Ontology editor), Apache Jena, Apache Tomcat.\\
+ & This project was carried out in the context of the Semantic Web course. The objective of the project was to build an ecommerce website where users could search for electronic products, browse product categories and get recommendations.\\\\
+ & \textit{Technologies: Protégé (Ontology editor), Apache Jena, Apache Tomcat.}\\
  &
  
 \end{ftabular}
@@ -214,9 +219,8 @@ Recommendation in eCommerce} \\
 
 \begin{ftabular}{p{4cm}|p{12cm}}
 \textsc{\small{Feb 2014 - May 2014}\hspace{1cm}} & \textbf{Expert Contact} \\
- & This project was carried out in the context of the Software Project Management course. The objective of the project was to build a new way of communication between the nurses and patients with breast cancer during chemotherapy sessions. This project was a partnership between the research team working at Institute of Health and Care Sciences of the University of Gotemburg and the University of Coimbra and was conducted by a multidisciplinary team.\\
- & Technologies used: Struts2, Hibernate Generic D.A.O. Framework, Bootstrap, Git.\\
- & Role in the team: Developer.
+ & This project was carried out in the context of the Software Project Management course. The objective of the project was to build a new way of communication between the nurses and patients with breast cancer during chemotherapy sessions. This project was a partnership between the research team working at Institute of Health and Care Sciences of the University of Gotemburg and the University of Coimbra and was conducted by a multidisciplinary team.\\\\
+ & \textit{Technologies: Apache Struts, Hibernate, HTML, CSS(Bootstrap), Javacript, Git.}\\
  
 \end{ftabular}
 
@@ -261,26 +265,26 @@ Recommendation in eCommerce} \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize*}
 \item{\textbf{Programming Languages:} Proficient in Python, C and Java. Additional knowledge in ActionScript 3.0 and Matlab.}
-\item{\textbf{Semantic Web:} Ontologies Representation (RDF,OWL), Triple Stores, SPARQL, Apache Jena, NLTK.}
-\item{\textbf{Artificial Intelligence:} Evolutionary Computation, Supervised/Unsupervised Learning Algorithms, Machine Learning, NLP.}
-\item{\textbf{Data Structures and Algorithms:} Knowledge of different Algorithmic Paradigms.}
-\item{\textbf{Control Version Systems:} Git.}
-\item{\textbf{Web Frameworks:} Django, Django Rest Framework, AngularJS 1, Struts2, , Bottle, Flask, Falcon. Familiar with Rails.}
+\item{\textbf{Web Frameworks:} Django, Django Rest Framework, FastAPI, Falcon, Flask, Apache Struts. Familiar with Rails.}
 \item{\textbf{Web protocols:} REST/RPC, gRPC with protocol buffers. }
-\item{\textbf{Hybrid Mobile App Frameworks:} Ionic.}
-\item{\textbf{Machine Learning Tools:} Keras, Tensorflow, PyTorch, scikit-learn, SciPy stack (NumPy, Matplotlib, pandas), seaborn, Weka.}
-\item{\textbf{Relational Databases:} PostgreSQL. Familiar with MySQL and Oracle.}
+\item{\textbf{Machine Learning Tools:} Kera/Tensorflow, PyTorch, scikit-learn, XGBoost, SciPy stack (NumPy, Matplotlib, pandas), seaborn, Weka.}
+\item{\textbf{Artificial Intelligence:} Evolutionary Computation, Supervised/Unsupervised Learning Algorithms, Natural Language Processig.}
+\item{\textbf{Data Structures and Algorithms:} Knowledge of different data structures and optimization algorithms.}
+\item{\textbf{Control Version Systems:} Git.}
+\item{\textbf{Relational Databases:} PostgreSQL, MySQL.}
 \item{\textbf{NoSQL Databases:} MongoDB.}
-\item{\textbf{Development Tools:} PyCharm, IntelliJ, Datagrip, Eclipse, Netbeans, Sublime Text Editor.}
 \item{\textbf{Deployment and Infrastructure:} Ansible, Docker.}
-\item{\textbf{Cloud Computing:} AWS EC2, GCP, Azure.}
+\item{\textbf{Semantic Web:} Ontologies Representation (RDF,OWL), Triple Stores, SPARQL, Apache Jena, NLTK.}
+\item{\textbf{Hybrid Mobile App Frameworks:} Ionic.}
+\item{\textbf{Development Tools:} PyCharm, WebStorm, Datagrip, Sublime Text Editor.}
+
+\item{\textbf{Cloud Computing:} AWS EC2, GCP}
 \item{\textbf{Web:} Proficient with HTML. Familiar with CSS and Bootstrap.}
 \item{\textbf{Operating Systems:} Competent in GNU/Linux and Windows.}
-\item{\textbf{Productivity/Project Management Tools:} LaTeX, Trello, Slack.}
+\item{\textbf{Productivity/Project Management Tools:} LaTeX, Trello, Redmine, Slack.}
 \item{\textbf{Languages:} Portuguese (fluent, native), English (very good).}
 \item{\textbf{Professional:} Self-motivated, Self-learner, Team Player, Planning and Organizational Skills.}
 \item{\textbf{Activities \& Interests:} Reading, Exercising, Programming by passion and hobby.}
-
 \end{itemize*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
