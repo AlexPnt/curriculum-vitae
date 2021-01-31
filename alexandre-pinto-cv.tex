@@ -1,16 +1,11 @@
 % (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
 % (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
 % (c) 2008-2014 Nathaniel Johnston <nathaniel@njohnston.ca> http://www.njohnston.ca
+% (c) 2017-2021 Alexandre Pinto <alexandpinto@gmail.com> http://www.alexpnt.github.io
 %
 % Depending on your TeX distribution, you may need to download the revnum and longtable packages for this template to work!
 %
 %This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
-
-
-%
-% Edited by Alexandre Pinto
-% 2020
-%
 
 \documentclass[usenames,dvipsnames,letterpaper,11pt]{article}
 \newlength{\outerbordwidth}
@@ -29,7 +24,11 @@
 \usepackage[utf8]{inputenc}
 \usepackage{marvosym}
 \usepackage[document]{ragged2e}
-\usepackage{fontspec}
+
+\usepackage[default]{raleway}
+% set font default
+\renewcommand*\familydefault{\sfdefault} 	
+\usepackage[T1]{fontenc}
 \usepackage{fontawesome}
 \usepackage{multicol}
 \include{cv-custom} 
@@ -37,8 +36,8 @@
 %Edit these values as you see fit
 
 \setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
-\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
-\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+\definecolor{shadecolor}{gray}{1}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{1}  % Inner background color of title bars
 
 
 %-----------------------------------------------------------
@@ -61,6 +60,7 @@
 
 %-----------------------------------------------------------
 %Custom commands
+\newcommand{\comment}[1]{}
 \newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
 \newcommand{\resheading}[1]{\vspace{8pt}
   \parbox{\textwidth}{\setlength{\FrameSep}{\fboxsep}
@@ -127,17 +127,26 @@
 {\large \begin{tabular*}{7in}{l@{\extracolsep{\fill}}l} 
 
 \textbf{\LARGE Alexandre Pinto}\smallskip & \smallskip \\
-Software Engineer | Coimbra, Portugal& 
+Software/Machine Learning Engineer \\
+Coimbra, Portugal& 
 
 
 \href{alexandpinto@gmail.com}{\small \faEnvelope{} | alexandpinto@gmail.com}\\ 
 & \href{https://alexpnt.github.io}{\small \faGlobe{} | alexpnt.github.io}\\
-Software engineer competent in implementing backend systems & \href{https://github.com/alexpnt}{\small \faGithub{} | alexpnt}\\
-with a focus on machine learning services. &  \href{https://www.linkedin.com/in/alexandre-pinto}{\small \faLinkedin{} | alexandre-pinto}\\
-Enjoys tackling engineering problems with good system design choices,\\ that strive for scalability and  efficient resource management.
+ & \href{https://github.com/alexpnt}{\small \faGithub{} | alexpnt}\\
+ &  \href{https://www.linkedin.com/in/alexandre-pinto}{\small \faLinkedin{} | alexandre-pinto}\\
+\\ 
 \end{tabular*}}
 \\
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Summary}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Software engineer competent in implementing backend systems with focus on machine learning services. 
+Enjoys tackling engineering problems with good system design choices, by writing clean code that strive for scalable and  performant software.
+\vspace{0.25cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Work Experience}
@@ -176,6 +185,94 @@ Enjoys tackling engineering problems with good system design choices,\\ that str
  & \textit{Technologies: Apache Struts/Java, Ruby on Rails/Ruby, Git.}\\
 
 \end{ftabular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education and training}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{University of Coimbra}{}{Master Degree in Informatics Engineering - Intelligent Systems}{2013 -- 2016}
+	\begin{itemize}
+		\resitem{Graduated with 15/20 average}
+		\resitem{Dissertation titled “Classification of Social Media Posts according to their Relevance”}
+	\end{itemize}
+\comment{
+	\ressubheading{}{}{Relevant Courses:}{}
+	\begin{itemize}
+		\resitem{Pattern Recognition, Artificial Intelligence}
+		\resitem{Evolutionary Computation, Adaptive Computation}
+		\resitem{Semantic Web, Internet Applications}
+		\resitem{Project Management, Systems Integration}
+		\resitem{Information Theory, Statistics, Technical Communication}
+	\end{itemize}
+}
+\item
+	\ressubheading{University of Coimbra}{}{Bachelor Degree in Informatics Engineering}{2010 -- 2013}
+	\begin{itemize}
+		\resitem{Admission Grade: 17.55/20 }
+		\resitem{Graduated with 16/20 average}
+	\end{itemize}
+\item
+	\ressubheading{High School - Quinta das Flores}{}{Science and Technology Course }{2007 -- 2010}
+	\begin{itemize}
+		\resitem{Graduated with 16/20 average}
+	\end{itemize}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Publications}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{{\colorhref[black]{https://link.springer.com/article/10.1007\%2Fs00354-017-0015-1}{Predicting the Relevance of Social Media Posts Based on Linguistic Features}}}{}{Alexandre Pinto and Gonçalo Oliveira, H, and Alves, A., New Generation Computing, 2017}{}
+
+	
+\item
+	\ressubheading{\colorhref[black]{http://drops.dagstuhl.de/opus/volltexte/2016/6008/pdf/OASIcs-SLATE-2016-3.pdf}{Comparing the Performance of Different NLP Toolkits in Formal and Social Media Text}}{}{Alexandre Pinto and Gonçalo Oliveira, H, and Alves, A., pp 1--16, vol 51, SLATE, 2016}{}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Awards, Grants \& Honours}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\vspace{-10pt}
+	\begin{center}\begin{longtable}{l@{\extracolsep{\fill}}r}
+		\multicolumn{2}{c}{Award to the 3\% Best Students \cftdotfill{\cftdotsep}2010 -- 2011}\\
+		\multicolumn{2}{c}{Award to the 3\% Best Students \cftdotfill{\cftdotsep}2011 -- 2012}\\
+		\vphantom{E}
+\end{longtable}
+\end{center}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Technical Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize*}
+\item{\textbf{Programming Languages:} Proficient in Python, C and Java. Additional knowledge in ActionScript 3.0 and Matlab.}
+\item{\textbf{Web Frameworks:} Django, Django Rest Framework, FastAPI, Falcon, Flask, Apache Struts. Familiar with Rails.}
+\item{\textbf{Web protocols:} REST/RPC, gRPC with protocol buffers. }
+\item{\textbf{Machine Learning Tools:} Keras/Tensorflow, PyTorch, scikit-learn, XGBoost, SciPy stack (NumPy, Matplotlib, pandas), seaborn, Weka.}
+\item{\textbf{Artificial Intelligence:} Evolutionary Computation, Supervised/Unsupervised Learning Algorithms, Natural Language Processig.}
+\item{\textbf{Data Structures and Algorithms:} Knowledge of different data structures and optimization algorithms.}
+\item{\textbf{Control Version Systems:} Git.}
+\item{\textbf{Relational Databases:} PostgreSQL, MySQL.}
+\item{\textbf{NoSQL Databases:} MongoDB.}
+\item{\textbf{Deployment and Infrastructure:} Ansible, Docker.}
+\item{\textbf{Semantic Web:} Ontologies Representation (RDF,OWL), Triple Stores, SPARQL, Apache Jena, NLTK.}
+\item{\textbf{Hybrid Mobile App Frameworks:} Ionic.}
+\item{\textbf{Development Tools:} PyCharm, WebStorm, Datagrip, Sublime Text Editor.}
+
+\item{\textbf{Cloud Computing:} AWS EC2, GCP}
+\item{\textbf{Web:} Proficient with HTML. Familiar with CSS and Bootstrap.}
+\item{\textbf{Operating Systems:} Competent in GNU/Linux and Windows.}
+\item{\textbf{Productivity/Project Management Tools:} LaTeX, Trello, Redmine, Slack.}
+\item{\textbf{Languages:} Portuguese (fluent, native), English (very good).}
+\item{\textbf{Professional:} Self-motivated, Self-learner, Team Player, Planning and Organizational Skills.}
+\item{\textbf{Activities \& Interests:} Reading, Exercising, Programming by passion and hobby.}
+
+\end{itemize*}
 
 \clearpage
 
@@ -227,91 +324,8 @@ Recommendation in eCommerce} \\
 
 \clearpage
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Education and training}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
-\item
-	\ressubheading{University of Coimbra}{}{Master Degree in Informatics Engineering - Intelligent Systems}{2013 -- 2016}
-	\begin{itemize}
-		\resitem{Graduated with 15/20 average}
-		\resitem{Dissertation titled “Classification of Social Media Posts according to their Relevance”}
-	\end{itemize}
-	\ressubheading{}{}{Relevant Courses:}{}
-	\begin{itemize}
-		\resitem{Pattern Recognition, Artificial Intelligence}
-		\resitem{Evolutionary Computation, Adaptive Computation}
-		\resitem{Semantic Web, Internet Applications}
-		\resitem{Project Management, Systems Integration}
-		\resitem{Information Theory, Statistics, Technical Communication}
-	\end{itemize}
-	
-\item
-	\ressubheading{University of Coimbra}{}{Bachelor Degree in Informatics Engineering}{2010 -- 2013}
-	\begin{itemize}
-		\resitem{Admission Grade: 17.55/20 }
-		\resitem{Graduated with 16/20 average}
-	\end{itemize}
-\item
-	\ressubheading{High School - Quinta das Flores}{}{Science and Technology Course }{2007 -- 2010}
-	\begin{itemize}
-		\resitem{Graduated with 16/20 average}
-	\end{itemize}
-
-\end{itemize}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Technical Skills}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize*}
-\item{\textbf{Programming Languages:} Proficient in Python, C and Java. Additional knowledge in ActionScript 3.0 and Matlab.}
-\item{\textbf{Web Frameworks:} Django, Django Rest Framework, FastAPI, Falcon, Flask, Apache Struts. Familiar with Rails.}
-\item{\textbf{Web protocols:} REST/RPC, gRPC with protocol buffers. }
-\item{\textbf{Machine Learning Tools:} Kera/Tensorflow, PyTorch, scikit-learn, XGBoost, SciPy stack (NumPy, Matplotlib, pandas), seaborn, Weka.}
-\item{\textbf{Artificial Intelligence:} Evolutionary Computation, Supervised/Unsupervised Learning Algorithms, Natural Language Processig.}
-\item{\textbf{Data Structures and Algorithms:} Knowledge of different data structures and optimization algorithms.}
-\item{\textbf{Control Version Systems:} Git.}
-\item{\textbf{Relational Databases:} PostgreSQL, MySQL.}
-\item{\textbf{NoSQL Databases:} MongoDB.}
-\item{\textbf{Deployment and Infrastructure:} Ansible, Docker.}
-\item{\textbf{Semantic Web:} Ontologies Representation (RDF,OWL), Triple Stores, SPARQL, Apache Jena, NLTK.}
-\item{\textbf{Hybrid Mobile App Frameworks:} Ionic.}
-\item{\textbf{Development Tools:} PyCharm, WebStorm, Datagrip, Sublime Text Editor.}
-
-\item{\textbf{Cloud Computing:} AWS EC2, GCP}
-\item{\textbf{Web:} Proficient with HTML. Familiar with CSS and Bootstrap.}
-\item{\textbf{Operating Systems:} Competent in GNU/Linux and Windows.}
-\item{\textbf{Productivity/Project Management Tools:} LaTeX, Trello, Redmine, Slack.}
-\item{\textbf{Languages:} Portuguese (fluent, native), English (very good).}
-\item{\textbf{Professional:} Self-motivated, Self-learner, Team Player, Planning and Organizational Skills.}
-\item{\textbf{Activities \& Interests:} Reading, Exercising, Programming by passion and hobby.}
-
-\end{itemize*}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Publications}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
-\item
-	\ressubheading{{\colorhref[black]{https://link.springer.com/article/10.1007\%2Fs00354-017-0015-1}{Predicting the Relevance of Social Media Posts Based on Linguistic Features}}}{}{Alexandre Pinto and Gonçalo Oliveira, H, and Alves, A., New Generation Computing, 2017}{}
-
-	
-\item
-	\ressubheading{\colorhref[black]{http://drops.dagstuhl.de/opus/volltexte/2016/6008/pdf/OASIcs-SLATE-2016-3.pdf}{Comparing the Performance of Different NLP Toolkits in Formal and Social Media Text}}{}{Alexandre Pinto and Gonçalo Oliveira, H, and Alves, A., pp 1--16, vol 51, SLATE, 2016}{}
-
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Awards, Grants \& Honours}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\vspace{-10pt}
-	\begin{center}\begin{longtable}{l@{\extracolsep{\fill}}r}
-		\multicolumn{2}{c}{Award to the 3\% Best Students \cftdotfill{\cftdotsep}2010 -- 2011}\\
-		\multicolumn{2}{c}{Award to the 3\% Best Students \cftdotfill{\cftdotsep}2011 -- 2012}\\
-		\vphantom{E}
-\end{longtable}
-\end{center}
 
 
 \end{document}
