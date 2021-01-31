@@ -24,13 +24,22 @@
 \usepackage[utf8]{inputenc}
 \usepackage{marvosym}
 \usepackage[document]{ragged2e}
+\usepackage{multicol}
 
-\usepackage[default]{raleway}
+
+%\usepackage[defaultsans]{droidsans}
+%\usepackage[default]{comfortaa}
+\usepackage{cmbright}
+%\usepackage[default]{raleway}
+%\usepackage{fetamont}
+%\usepackage[default]{gillius}
+%\usepackage[light,math]{iwona} 
+
 % set font default
 \renewcommand*\familydefault{\sfdefault} 	
 \usepackage[T1]{fontenc}
 \usepackage{fontawesome}
-\usepackage{multicol}
+
 \include{cv-custom} 
 %-----------------------------------------------------------
 %Edit these values as you see fit
@@ -38,6 +47,7 @@
 \setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
 \definecolor{shadecolor}{gray}{1}  % Outer background color of title bars (0 = black, 1 = white)
 \definecolor{shadecolorB}{gray}{1}  % Inner background color of title bars
+\definecolor{babyblue}{RGB}{0,150,255}
 
 
 %-----------------------------------------------------------
@@ -70,7 +80,7 @@
   }\vspace{-5pt}
 }
 
-\newcommand{\colorhref}[3][blue]{\href{#2}{\color{#1}{#3}}}%
+\newcommand{\colorhref}[3][babyblue]{\href{#2}{\color{#1}{#3}}}%
 
 % the next four commands allow for the \ressubheading environment to be 1, 2, 3, or 4 subrows, depending on which command you use. This is admittedly hack-ish, and should probably be replaced by a single more flexible command (with optional arguments) in the future
 \newcommand{\ressubheading}[4]{
@@ -131,10 +141,10 @@ Software/Machine Learning Engineer \\
 Coimbra, Portugal& 
 
 
-\href{alexandpinto@gmail.com}{\small \faEnvelope{} | alexandpinto@gmail.com}\\ 
-& \href{https://alexpnt.github.io}{\small \faGlobe{} | alexpnt.github.io}\\
- & \href{https://github.com/alexpnt}{\small \faGithub{} | alexpnt}\\
- &  \href{https://www.linkedin.com/in/alexandre-pinto}{\small \faLinkedin{} | alexandre-pinto}\\
+\colorhref{alexandpinto@gmail.com}{\small \faEnvelope{} | alexandpinto@gmail.com}\\ 
+& \colorhref{https://alexpnt.github.io}{\small \faGlobe{} | alexpnt.github.io}\\
+ & \colorhref{https://github.com/alexpnt}{\small \faGithub{} | alexpnt}\\
+ &  \colorhref{https://www.linkedin.com/in/alexandre-pinto}{\small \faLinkedin{} | alexandre-pinto}\\
 \\ 
 \end{tabular*}}
 \\
@@ -153,8 +163,8 @@ Enjoys tackling engineering problems with good system design choices, by writing
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 \begin{ftabular}{p{4cm}|p{12cm}}
-\textsc{\small{Nov 2017 - Present}} & \textbf{Machine Learning Engineer -} \textbf{\href{https://www.wit-software.com/}{WIT software}} \\
-& At WIT, I am responsible for turning machine learning experiments and proof-of-concept prototypes into production-ready solutions, always having performance and scalability in mind. I work mostly in the Natural Language Processing (NLP) sub-field of Artificial Intelligence, using state-of-art methods. My daily work encompasses all stages of research, design, implementation and testing of machine learning services (\href{https://www.wcp.ai}{https://www.wcp.ai}).\\\\
+\textbf{\small{Nov 2017 - Present}} & \textbf{Machine Learning Engineer -} \textbf{\colorhref{https://www.wit-software.com/}{WIT software}} \\
+& At WIT, I am responsible for turning machine learning experiments and proof-of-concept prototypes into production-ready solutions, always having performance and scalability in mind. I work mostly in the Natural Language Processing (NLP) sub-field of Artificial Intelligence, using state-of-art methods. My daily work encompasses all stages of research, design, implementation and testing of machine learning services (\colorhref{https://www.wcp.ai}{https://www.wcp.ai}).\\\\
  & \textit{Technologies: Python, NumPy, Pandas, Scikit-learn, XGBoost, \hfill \break Tensorflow, Pytorch,  Docker, Ansible, Git.} \\
 
 
@@ -163,23 +173,23 @@ Enjoys tackling engineering problems with good system design choices, by writing
 \vspace{0.25cm}
 
 \begin{ftabular}{p{4cm}|p{12cm}}
-\textsc{\small{Nov 2016 - Oct 2017}} & \textbf{Backend Developer -} \textbf{\href{http://www.ubiwhere.com/en/}{Ubiwhere}} \\
- & At Ubiwhere, I was part of the core team responsible for developing a smart water consumption platform for the city of Porto, Portugal. This meant building a system with high-availability, multi-tenancy and concurrency support. My job consisted in implementing REST APIs and developing the core of the backend web services. Furthermore, I was also involved in the development of the frontend mobile app, used by hundreds of users and available in multiple mobile operating systems such as Android and iOS (\href{https://www.ubiwhere.com/en/case-studies/smart-cities/app-aguas-do-porto}{app-aguas-do-porto}).  \\\\
+\textbf{\small{Nov 2016 - Oct 2017}} & \textbf{Backend Developer -} \textbf{\colorhref{http://www.ubiwhere.com/en/}{Ubiwhere}} \\
+ & At Ubiwhere, I was part of the core team responsible for developing a smart water consumption platform for the city of Porto, Portugal. This meant building a system with high-availability, multi-tenancy and concurrency support. My job consisted in implementing REST APIs and developing the core of the backend web services. Furthermore, I was also involved in the development of the frontend mobile app, used by hundreds of users and available in multiple mobile operating systems such as Android and iOS (\colorhref{https://www.ubiwhere.com/en/case-studies/smart-cities/app-aguas-do-porto}{app-aguas-do-porto}).  \\\\
  & \textit{Technologies: Django/Python, Django REST Framework, Ionic, Docker, Git.} \\
   
 \end{ftabular}
 \vspace{0.25cm}
 
 \begin{ftabular}{p{4cm}|p{12cm}}
-\textsc{\small{Oct 2015 - Jul 2016}} & \textbf{Machine Learning Research Intern -} \textbf{\href{https://www.inesctec.pt/ip-en?set_language=en\&cl=en}{INESCTEC}} / \textbf{\href{https://www.cisuc.uc.pt/}{CISUC}} \\
- & At INESC TEC/CISUC, I was involved in a research team that developed a filter system that classifies public social data according to their potential relevance to a general audience, filtering out irrelevant information and relying primarily on linguistic and journalistic features (\href{https://reminds.dcc.fc.up.pt/}{reminds.dcc.fc.up.pt}).\\\\
+\textbf{\small{Oct 2015 - Jul 2016}} & \textbf{Machine Learning Research Intern -} \textbf{\colorhref{https://www.inesctec.pt/ip-en?set_language=en\&cl=en}{INESCTEC}} / \textbf{\colorhref{https://www.cisuc.uc.pt/}{CISUC}} \\
+ & At INESC TEC/CISUC, I was involved in a research team that developed a filter system that classifies public social data according to their potential relevance to a general audience, filtering out irrelevant information and relying primarily on linguistic and journalistic features (\colorhref{https://reminds.dcc.fc.up.pt/}{reminds.dcc.fc.up.pt}).\\\\
  & \textit{Technologies: Python, NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn, PyQt5.}\\
   
 \end{ftabular}
 \vspace{0.25cm}
 
 \begin{ftabular}{p{4cm}|p{12cm}}
-\textsc{\small{Oct 2013 - Mar 2014}} & \textbf{Software Developer -} \textbf{\href{http://ipn.pt/laboratorio/LIS}{Pedro Nunes Institute (IPN)}} \\
+\textbf{\small{Oct 2013 - Mar 2014}} & \textbf{Software Developer -} \textbf{\colorhref{http://ipn.pt/laboratorio/LIS}{Pedro Nunes Institute (IPN)}} \\
  & At IPN (Laboratory for Informatics and Systems), I maintained and developed new features for the information systems.
 \\\\
  & \textit{Technologies: Apache Struts/Java, Ruby on Rails/Ruby, Git.}\\
